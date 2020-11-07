@@ -14,9 +14,16 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import Pages.NDTvHomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.WeatherDetails;
 
 public class WeatherTest extends BaseClass {
+	
+	NDTvHomePage homepage= new NDTvHomePage();
+	int tempInDegree;
+	WeatherDetails weatherDetailsFromUI = new WeatherDetails();
+	
 	
 
 	@Test (priority=0)
@@ -24,12 +31,14 @@ public class WeatherTest extends BaseClass {
 //		WebDriverManager.chromedriver().setup();
 //		driver= new ChromeDriver();
 		
-		driver.get("https://www.ndtv.com/");
+	//	driver.get("https://www.ndtv.com/");
+	//	waitForPageLoad(10);
 		driver.manage().window().maximize();
 		
 		//find weather button and click
 		WebElement menuButton = driver.findElement(By.id("h_sub_menu"));
 		menuButton.click();
+		//homepage.menuButton.click();
 		
 		//Click on weather button
 		WebElement weatherButton = driver.findElement(By.linkText("WEATHER"));
@@ -56,6 +65,20 @@ public class WeatherTest extends BaseClass {
 	@Test(priority = 2)
 	public void validateSelectingCityOnMapRevealsTempDetailstest() {
 		selectCityOnMap("Bhubaneswar");
+	}
+	
+	@Test(priority =3)
+	public void getTemparatureDetailsOfCityTest() {
+		tempInDegree= getTemparatureInDegree("Bhubaneswar");
+		System.out.println("temp of city in degress is :"+tempInDegree);
+		weatherDetailsFromUI.setTempDegrees(tempInDegree);
+		
+	}
+	
+	public int getTemparatureInDegree(String city) {
+		WebElement tempInDegreeText= driver.findElement(By.xpath("//div[@class='leaflet-popup-content']//span[4]"));
+		int temp= Integer.parseInt(tempInDegreeText.getText().substring(17));
+		return temp;
 	}
 	
 	public void selectCityOnMap(String city) {

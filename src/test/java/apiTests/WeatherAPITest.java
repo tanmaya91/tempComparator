@@ -11,10 +11,12 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import utils.WeatherDetails;
 
 public class WeatherAPITest extends APIBaseTest{
 	public static String baseUrl="https://api.openweathermap.org/data/2.5/weather";
 	public static Map<String, Object> queryParams = null;
+	WeatherDetails weatherDetailsFromAPI = new WeatherDetails();
 
 	@Test
 	public void getWeatherByCityTest() {
@@ -40,6 +42,8 @@ public class WeatherAPITest extends APIBaseTest{
 		JsonPath sys = jsonPathWeatherResponse.get("sys");
 		System.out.println(jsonPathWeatherResponse.getString("name"));
 		System.out.println(jsonPathWeatherResponse.getString("main.temp"));
+		int tempInDegrees= Integer.parseInt(jsonPathWeatherResponse.getString("main.temp"));
+		weatherDetailsFromAPI.setTempDegrees(tempInDegrees);
 		
 		
 		/*

@@ -2,6 +2,7 @@ package uiTests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -13,8 +14,12 @@ public class BaseClass {
 	
 	 @BeforeSuite
 	    public void setup() {
+		 ChromeOptions ops = new ChromeOptions();
+         ops.addArguments("--disable-notifications");
 		 WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver();
+			driver= new ChromeDriver(ops);
+			
+			driver.get("https://www.ndtv.com/");
 	 }
 	
 	

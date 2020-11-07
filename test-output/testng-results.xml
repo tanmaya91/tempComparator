@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13568" started-at="2020-11-07T15:37:22 IST" finished-at="2020-11-07T15:37:36 IST">
+  <suite name="Default suite" duration-ms="6066" started-at="2020-11-07T22:05:06 IST" finished-at="2020-11-07T22:05:13 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13568" started-at="2020-11-07T15:37:22 IST" finished-at="2020-11-07T15:37:36 IST">
+    <test name="Default test" duration-ms="6066" started-at="2020-11-07T22:05:06 IST" finished-at="2020-11-07T22:05:13 IST">
       <class name="uiTests.WeatherTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:uiTests.WeatherTest@7113b13f]" name="setup" is-config="true" duration-ms="7322" started-at="2020-11-07T15:37:15 IST" finished-at="2020-11-07T15:37:22 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:uiTests.WeatherTest@149494d8]" name="setup" is-config="true" duration-ms="13198" started-at="2020-11-07T22:04:53 IST" finished-at="2020-11-07T22:05:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="navigateToWeatherPage()[pri:0, instance:uiTests.WeatherTest@7113b13f]" name="navigateToWeatherPage" duration-ms="8561" started-at="2020-11-07T15:37:22 IST" finished-at="2020-11-07T15:37:31 IST">
+        <test-method status="PASS" signature="navigateToWeatherPage()[pri:0, instance:uiTests.WeatherTest@149494d8]" name="navigateToWeatherPage" duration-ms="3857" started-at="2020-11-07T22:05:07 IST" finished-at="2020-11-07T22:05:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToWeatherPage -->
-        <test-method status="PASS" signature="pinCityInWeatherPageTest()[pri:1, instance:uiTests.WeatherTest@7113b13f]" name="pinCityInWeatherPageTest" duration-ms="4244" started-at="2020-11-07T15:37:31 IST" finished-at="2020-11-07T15:37:35 IST">
+        <test-method status="PASS" signature="pinCityInWeatherPageTest()[pri:1, instance:uiTests.WeatherTest@149494d8]" name="pinCityInWeatherPageTest" duration-ms="1770" started-at="2020-11-07T22:05:10 IST" finished-at="2020-11-07T22:05:12 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pinCityInWeatherPageTest -->
-        <test-method status="PASS" signature="validateSelectingCityOnMapRevealsTempDetailstest()[pri:2, instance:uiTests.WeatherTest@7113b13f]" name="validateSelectingCityOnMapRevealsTempDetailstest" duration-ms="691" started-at="2020-11-07T15:37:35 IST" finished-at="2020-11-07T15:37:36 IST">
+        <test-method status="PASS" signature="validateSelectingCityOnMapRevealsTempDetailstest()[pri:2, instance:uiTests.WeatherTest@149494d8]" name="validateSelectingCityOnMapRevealsTempDetailstest" duration-ms="302" started-at="2020-11-07T22:05:12 IST" finished-at="2020-11-07T22:05:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateSelectingCityOnMapRevealsTempDetailstest -->
+        <test-method status="PASS" signature="getTemparatureDetailsOfCityTest()[pri:3, instance:uiTests.WeatherTest@149494d8]" name="getTemparatureDetailsOfCityTest" duration-ms="49" started-at="2020-11-07T22:05:13 IST" finished-at="2020-11-07T22:05:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTemparatureDetailsOfCityTest -->
       </class> <!-- uiTests.WeatherTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
