@@ -5,8 +5,8 @@
     <classes>
       <class name="uiTests.WeatherTest">
         <methods>
+          <include name="validateSelectingCityOnMapRevealsTempDetailstest"/>
           <include name="setup"/>
-          <include name="pinCityInWeatherPageTest"/>
         </methods>
       </class> <!-- uiTests.WeatherTest -->
     </classes>
