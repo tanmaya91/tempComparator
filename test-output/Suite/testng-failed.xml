@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <test thread-count="5" name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.apiTests.WeatherAPITest">
+        <methods>
+          <include name="getWeatherByCityTest"/>
+        </methods>
+      </class> <!-- com.apiTests.WeatherAPITest -->
+      <class name="com.uiTests.WeatherTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="getTemparatureDetailsOfCityTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.uiTests.WeatherTest -->
+      <class name="com.comparisonTests.ComparatorTests">
+        <methods>
+          <include name="compareUiAndApiTemperatureTest"/>
+        </methods>
+      </class> <!-- com.comparisonTests.ComparatorTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

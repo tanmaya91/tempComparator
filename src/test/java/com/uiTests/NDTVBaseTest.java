@@ -60,10 +60,11 @@ public class NDTVBaseTest extends BaseClass{
 	public void selectCityOnPinMyCitySearchBox(String cityName){
 
 		WebElement selectCityCheckbox = driver.findElement(By.id(cityName));
-	/*
-	 * weatherPage= new WeatherPage(); weatherPage.
-	 */
-		selectCityCheckbox.click();
+		if (!selectCityCheckbox.isSelected())
+			selectCityCheckbox.click();
+		else
+			System.out.println("The city is already selected");
+		
 	}
 	
 	public void waitForPageLoad(int timeSeconds) {
