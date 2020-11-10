@@ -10,7 +10,7 @@ The comparison test is available in the com.comparison package.
 The file \src\test\resources\testData\data.properties contains configurable data.
 
 Steps to run:
-1. Import the project.
+1. Colne the project.
 2. Select the project >> run as >> Maven Install.
 3. Do maven >> update project.
 4. Run the testng.xml as testng suite.
